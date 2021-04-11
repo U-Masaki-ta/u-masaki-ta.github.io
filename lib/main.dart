@@ -1,6 +1,7 @@
 import 'dart:html';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_portfolio/about.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,14 +20,13 @@ class MyApp extends StatelessWidget {
       title: _title,
       theme: ThemeData(
         primaryColor: Colors.blue[200],
-        //Color.fromARGB(240, 100, 200, 255)
       ),
       home: Stack(
         children: <Widget>[
           Image(
-            height: double.infinity,
             width: double.infinity,
-            image: AssetImage('assets/background.jpg'),
+            height: double.infinity,
+            image: AssetImage('assets/imgs/background.jpg'),
             fit: BoxFit.cover,
           ),
           MyHomePage(),
@@ -46,7 +46,6 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   TabController _tabController;
-
   @override
   void initState() {
     super.initState();
@@ -79,10 +78,8 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
       ),
       body: TabBarView(
         controller: _tabController,
-        children: const <Widget>[
-          Center(
-            child: const Text("About me"),
-          ),
+        children: <Widget>[
+          AboutWidget(),
           Center(
             child: const Text("Achieves"),
           ),
