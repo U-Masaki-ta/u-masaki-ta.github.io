@@ -40,8 +40,7 @@ class AboutWidgetState extends State<AboutWidget> {
       spacing: 10,
       runSpacing: 20,
       children: <Widget>[
-        Expanded(
-          child: Container(
+          Container(
             margin: EdgeInsets.fromLTRB(20, 30, 0, 10),
             width: 150,
             height: 150,
@@ -50,11 +49,10 @@ class AboutWidgetState extends State<AboutWidget> {
                 image: DecorationImage(
                   fit: BoxFit.fill,
                   image: AssetImage('assets/imgs/profile.jpg'),
-                )),
+                )
+            ),
           ),
-        ),
-        Expanded(
-          child: Container(
+          Container(
             child: Center(
               child: Text(
                 "Masaki Nakayama",
@@ -65,8 +63,7 @@ class AboutWidgetState extends State<AboutWidget> {
                 ),
               ),
             ),
-          ),
-        )
+          )
       ],
     ));
   }
@@ -87,14 +84,14 @@ class AboutWidgetState extends State<AboutWidget> {
         direction: Axis.vertical,
         spacing: 4,
         children: <Widget>[
-          Text("中京大学工学部情報工学科３年"),
-          Text("ラシキアゼミ所属　中山　雅貴\n"),
-          Text("　趣味 : 　読書・旅行・写真　\n"),
-          Text("　大学・学部を決めたきっかけ\n"),
-          Text("ゲームをプレイすることが好きで"),
-          Text("ゲームがどのように作られている"),
-          Text("のかに興味を持ったこと\n\n\n"),
-          Text("　　　©2021 U-Masaki-ta　　　"),
+          Text("　中京大学工学部情報工学科３年"),
+          Text("　ラシキアゼミ所属　中山　雅貴\n"),
+          Text("　　趣味 : 　読書・旅行・写真　\n"),
+          Text("　　大学・学部を決めたきっかけ\n"),
+          Text("　ゲームをプレイすることが好きで"),
+          Text("　ゲームがどのように作られている"),
+          Text("　のかに興味を持ったこと\n\n\n"),
+          Text("　　　　©2021 U-Masaki-ta　　　　"),
         ],
       ),
     );
