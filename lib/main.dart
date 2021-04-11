@@ -19,7 +19,8 @@ class MyApp extends StatelessWidget {
       //ページのタイトル
       title: _title,
       theme: ThemeData(
-        primaryColor: Colors.blue[200],
+        primarySwatch: Colors.red,
+        primaryColor: Colors.orange[200],
       ),
       home: Stack(
         children: <Widget>[
@@ -56,22 +57,57 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
     return Scaffold(
       backgroundColor: Colors.transparent,
       appBar: AppBar(
-        title: Text('My Portfolio'),
+        title: Text(
+          'My Portfolio',
+          style: TextStyle(
+            fontFamily: 'Oswald',
+            fontSize: 30,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         bottom: TabBar(
           controller: _tabController,
           indicatorWeight: 5,
           tabs: const <Widget>[
             Tab(
-              text: 'About',
+              child: Text(
+                'About',
+                style: TextStyle(
+                  fontFamily: 'Oswald',
+                  fontSize: 20,
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
             ),
             Tab(
-              text: 'Achieves',
+              child: Text(
+                'Achieves',
+                style: TextStyle(
+                  fontFamily: 'Oswald',
+                  fontSize: 20,
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
             ),
             Tab(
-              text: 'Skills',
+              child: Text(
+                'Skills',
+                style: TextStyle(
+                  fontFamily: 'Oswald',
+                  fontSize: 20,
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
             ),
             Tab(
-              text: 'Contact',
+              child: Text(
+                'Contact',
+                style: TextStyle(
+                  fontFamily: 'Oswald',
+                  fontSize: 20,
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
             ),
           ],
         ),

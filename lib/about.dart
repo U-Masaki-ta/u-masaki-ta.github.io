@@ -15,22 +15,22 @@ class AboutWidgetState extends State<AboutWidget> {
 
   Container _createabout(BuildContext context) {
     return Container(
-        margin: EdgeInsets.only(top: 40),
         child: SingleChildScrollView(
             child: Container(
-          margin: EdgeInsets.all(70.0),
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(8.0),
-              color: Color.fromARGB(230, 255, 255, 255)),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              _profileArea(),
-              _textArea(),
-              _introArea(),
-            ],
-          ),
-        )));
+      padding: EdgeInsets.symmetric(vertical: 50),
+      margin: EdgeInsets.all(70.0),
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(8.0),
+          color: Color.fromARGB(230, 255, 255, 255)),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          _profileArea(),
+          _textArea(),
+          _introArea(),
+        ],
+      ),
+    )));
   }
 
   Widget _profileArea() {
@@ -40,30 +40,29 @@ class AboutWidgetState extends State<AboutWidget> {
       spacing: 10,
       runSpacing: 20,
       children: <Widget>[
-          Container(
-            margin: EdgeInsets.fromLTRB(20, 30, 0, 10),
-            width: 150,
-            height: 150,
-            decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                image: DecorationImage(
-                  fit: BoxFit.fill,
-                  image: AssetImage('assets/imgs/profile.jpg'),
-                )
-            ),
-          ),
-          Container(
-            child: Center(
-              child: Text(
-                "Masaki Nakayama",
-                style: TextStyle(
-                  fontFamily: 'Oswald',
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                ),
+        Container(
+          margin: EdgeInsets.fromLTRB(20, 30, 0, 10),
+          width: 150,
+          height: 150,
+          decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              image: DecorationImage(
+                fit: BoxFit.fill,
+                image: AssetImage('assets/imgs/profile.jpg'),
+              )),
+        ),
+        Container(
+          child: Center(
+            child: Text(
+              "Masaki Nakayama",
+              style: TextStyle(
+                fontFamily: 'Oswald',
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
               ),
             ),
-          )
+          ),
+        )
       ],
     ));
   }
@@ -90,7 +89,7 @@ class AboutWidgetState extends State<AboutWidget> {
           Text("　　大学・学部を決めたきっかけ\n"),
           Text("　ゲームをプレイすることが好きで"),
           Text("　ゲームがどのように作られている"),
-          Text("　のかに興味を持ったこと\n\n\n"),
+          Text("　のかに興味を持ったこと\n\n\n\n"),
           Text("　　　　©2021 U-Masaki-ta　　　　"),
         ],
       ),
