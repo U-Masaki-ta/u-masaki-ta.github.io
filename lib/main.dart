@@ -1,7 +1,10 @@
 //import 'dart:html';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_portfolio/about.dart';
+import 'package:flutter_portfolio/about/about.dart';
+import 'package:flutter_portfolio/achieves/programachieve.dart';
+import 'package:flutter_portfolio/achieves/illustachieve.dart';
+import 'package:flutter_portfolio/achieves/modelachieve.dart';
 
 void main() {
   runApp(MyApp());
@@ -74,7 +77,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                 'About',
                 style: TextStyle(
                   fontFamily: 'Oswald',
-                  fontSize: 20,
+                  fontSize: 18,
                   fontStyle: FontStyle.italic,
                 ),
               ),
@@ -84,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                 'Achieves',
                 style: TextStyle(
                   fontFamily: 'Oswald',
-                  fontSize: 20,
+                  fontSize: 18,
                   fontStyle: FontStyle.italic,
                 ),
               ),
@@ -94,17 +97,17 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                 'Skills',
                 style: TextStyle(
                   fontFamily: 'Oswald',
-                  fontSize: 20,
+                  fontSize: 18,
                   fontStyle: FontStyle.italic,
                 ),
               ),
             ),
             Tab(
               child: Text(
-                'Contact',
+                'Contacts',
                 style: TextStyle(
                   fontFamily: 'Oswald',
-                  fontSize: 20,
+                  fontSize: 18,
                   fontStyle: FontStyle.italic,
                 ),
               ),
@@ -115,9 +118,13 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
       body: TabBarView(
         controller: _tabController,
         children: <Widget>[
-          AboutWidget(),
-          Center(
-            child: const Text("Achieves"),
+          SingleChildScrollView(child: AboutWidget()),
+          ListView(
+            children: [
+              ProgramachieveWidget(),
+              IllistachieveWidget(),
+              ModelingachieveWidget(),
+            ],
           ),
           Center(
             child: const Text("Skills"),
@@ -129,4 +136,8 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
       ),
     );
   }
+
+  var descTextStyle = TextStyle(
+    fontFamily: 'NotoSun',
+  );
 }
