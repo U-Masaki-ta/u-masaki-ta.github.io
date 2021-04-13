@@ -72,7 +72,7 @@ class ProgramachieveWidgetState extends State<ProgramachieveWidget> {
         Container(
           margin: EdgeInsets.only(bottom: 10),
           child: Text(
-            "Oclus Quest 対応　RollerBall",
+            "Oculus Quest 対応　RollerBall",
             style: TextStyle(
               fontFamily: 'Oswald',
               fontSize: 18,
