@@ -41,7 +41,7 @@ class ProgramachieveWidgetState extends State<ProgramachieveWidget> {
 
   Widget _textArea() {
     return Container(
-      margin: EdgeInsets.only(top: 5),
+      margin: EdgeInsets.only(top: 10),
       child: Text(
         "Program",
         style: TextStyle(
@@ -65,7 +65,7 @@ class ProgramachieveWidgetState extends State<ProgramachieveWidget> {
             borderRadius: BorderRadius.circular(8.0),
             image: DecorationImage(
               fit: BoxFit.fill,
-              image: AssetImage('assets/imgs/RollerBall_for_VR.png'),
+              image: AssetImage('assets/imgs/thumbnail/RollerBall_for_VR.png'),
             ),
           ),
         ),

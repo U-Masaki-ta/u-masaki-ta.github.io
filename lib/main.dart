@@ -5,6 +5,8 @@ import 'package:flutter_portfolio/about/about.dart';
 import 'package:flutter_portfolio/achieves/programachieve.dart';
 import 'package:flutter_portfolio/achieves/illustachieve.dart';
 import 'package:flutter_portfolio/achieves/modelachieve.dart';
+import 'package:flutter_portfolio/contacts/contact.dart';
+import 'package:flutter_portfolio/skills/skill.dart';
 
 void main() {
   runApp(MyApp());
@@ -126,12 +128,8 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
               ModelingachieveWidget(),
             ],
           ),
-          Center(
-            child: const Text("Skills"),
-          ),
-          Center(
-            child: const Text("Contact"),
-          ),
+          SkillWidget(),
+          ContactWidget(),
         ],
       ),
     );
