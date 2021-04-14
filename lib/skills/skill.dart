@@ -21,9 +21,9 @@ class SkillWidgetState extends State<SkillWidget> {
             borderRadius: BorderRadius.circular(8.0),
             color: Color.fromARGB(230, 255, 255, 255),
           ),
-          margin: EdgeInsets.fromLTRB(120, 120, 120, 120),
+          margin: EdgeInsets.symmetric(vertical: 120, horizontal: 70),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
+            //crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               _textArea(),
               Wrap(
