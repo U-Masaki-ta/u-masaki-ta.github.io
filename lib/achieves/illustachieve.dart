@@ -43,7 +43,7 @@ class IllistachieveWidgetState extends State<IllistachieveWidget> {
 
   Widget _textArea() {
     return Container(
-      margin: EdgeInsets.only(top: 5),
+      margin: EdgeInsets.only(top: 10),
       child: Text(
         "Illusts(Fan Art)",
         style: TextStyle(
@@ -67,7 +67,7 @@ class IllistachieveWidgetState extends State<IllistachieveWidget> {
             borderRadius: BorderRadius.circular(8.0),
             image: DecorationImage(
               fit: BoxFit.fill,
-              image: AssetImage('assets/imgs/Ghostdance.PNG'),
+              image: AssetImage('assets/imgs/thumbnail/Ghostdance.PNG'),
             ),
           ),
         ),
@@ -97,7 +97,7 @@ class IllistachieveWidgetState extends State<IllistachieveWidget> {
             borderRadius: BorderRadius.circular(8.0),
             image: DecorationImage(
               fit: BoxFit.fill,
-              image: AssetImage('assets/imgs/menou.PNG'),
+              image: AssetImage('assets/imgs/thumbnail/menou.PNG'),
             ),
           ),
         ),
@@ -127,7 +127,7 @@ class IllistachieveWidgetState extends State<IllistachieveWidget> {
             borderRadius: BorderRadius.circular(8.0),
             image: DecorationImage(
               fit: BoxFit.fill,
-              image: AssetImage('assets/imgs/Ghosttokyo.jpg'),
+              image: AssetImage('assets/imgs/thumbnail/Ghosttokyo.jpg'),
             ),
           ),
         ),

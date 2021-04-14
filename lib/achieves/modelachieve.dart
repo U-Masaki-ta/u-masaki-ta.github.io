@@ -42,7 +42,7 @@ class ModelingachieveWidgetState extends State<ModelingachieveWidget> {
 
   Widget _textArea() {
     return Container(
-      margin: EdgeInsets.only(top: 5),
+      margin: EdgeInsets.only(top: 10),
       child: Text(
         "3D Models",
         style: TextStyle(
@@ -66,7 +66,7 @@ class ModelingachieveWidgetState extends State<ModelingachieveWidget> {
             borderRadius: BorderRadius.circular(8.0),
             image: DecorationImage(
               fit: BoxFit.fill,
-              image: AssetImage('assets/imgs/model1.png'),
+              image: AssetImage('assets/imgs/thumbnail/model1.png'),
             ),
           ),
         ),
@@ -96,7 +96,7 @@ class ModelingachieveWidgetState extends State<ModelingachieveWidget> {
             borderRadius: BorderRadius.circular(8.0),
             image: DecorationImage(
               fit: BoxFit.fill,
-              image: AssetImage('assets/imgs/model2.png'),
+              image: AssetImage('assets/imgs/thumbnail/model2.png'),
             ),
           ),
         ),
