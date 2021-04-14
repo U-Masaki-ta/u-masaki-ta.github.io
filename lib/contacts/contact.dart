@@ -27,7 +27,7 @@ class ContactWidgetState extends State<ContactWidget> {
             borderRadius: BorderRadius.circular(8.0),
             color: Color.fromARGB(230, 255, 255, 255),
           ),
-          margin: EdgeInsets.fromLTRB(120, 120, 120, 120),
+          margin: EdgeInsets.symmetric(vertical: 120, horizontal: 70),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
@@ -197,7 +197,7 @@ class ContactWidgetState extends State<ContactWidget> {
                 ),
               ),
               onPressed: () {
-                _openMailapp();
+                _launchURL(_emailLaunchUri.toString());
               },
             ),
           ),
@@ -214,12 +214,8 @@ class ContactWidgetState extends State<ContactWidget> {
     }
   }
 
-  _openMailapp() {
-    final title = Uri.encodeComponent('title');
-    final body = Uri.encodeComponent('main');
-
-    return _launchURL(
-      'mailto:$_mailaddress?subject=$title&body=$body',
-    );
-  }
+  final Uri _emailLaunchUri = Uri(
+      scheme: 'mailto',
+      path: _mailaddress,
+      queryParameters: {'subject': 'Example Subject & Symbols are allowed!'});
 }
