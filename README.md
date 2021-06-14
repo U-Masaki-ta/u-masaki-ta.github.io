@@ -1,7 +1,7 @@
 # flutter_portfolio
 
 accsess
-https://u-masaki-ta.github.io/Portfolio-with-flutter/
+https://u-masaki-ta.github.io/
 
 ## Getting Started
 
