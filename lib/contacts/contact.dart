@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-const _urltwitter = 'https://twitter.com/KaN0_uta';
 const _urlnote = 'https://note.com/u_masaki_ta';
 const _urlgithub = 'https://github.com/U-Masaki-ta';
 const _mailaddress = 'u.masaki.ta@gmail.com';
@@ -35,7 +34,6 @@ class ContactWidgetState extends State<ContactWidget> {
               Wrap(
                 direction: Axis.vertical,
                 children: <Widget>[
-                  _twitter(),
                   _note(),
                   _github(),
                   _mail(),
@@ -59,42 +57,6 @@ class ContactWidgetState extends State<ContactWidget> {
           fontStyle: FontStyle.italic,
         ),
       ),
-    );
-  }
-
-  Widget _twitter() {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: <Widget>[
-        Container(
-          margin: EdgeInsets.only(bottom: 20),
-          width: 50,
-          height: 50,
-          child: Image(
-            image: AssetImage('assets/imgs/logo/twitter.png'),
-          ),
-        ),
-        Container(
-          width: 150,
-          height: 100,
-          margin: EdgeInsets.only(bottom: 20),
-          child: Center(
-            child: ElevatedButton(
-              child: Text('Show Twitter'),
-              style: ElevatedButton.styleFrom(
-                primary: Colors.blue,
-                onPrimary: Colors.white,
-                textStyle: TextStyle(
-                  fontSize: 15,
-                ),
-              ),
-              onPressed: () {
-                _launchURL(_urltwitter);
-              },
-            ),
-          ),
-        ),
-      ],
     );
   }
 
